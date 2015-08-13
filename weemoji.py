@@ -22,7 +22,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 SCRIPT_NAME    = "weemoji"
-SCRIPT_AUTHOR  = "Delisa Mason <delisa@acm.org>"
+SCRIPT_AUTHOR  = "Delisa Mason <delisam@acm.org>"
 SCRIPT_VERSION = "1.0"
 SCRIPT_LICENSE = "BSD"
 SCRIPT_DESC    = "Convert :emoji: to unicode emoji"
