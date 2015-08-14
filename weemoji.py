@@ -36,7 +36,7 @@ except ImportError:
     print "This script must be run under WeeChat."
     import_ok = False
 
-MATCHER = re.compile(":(\w+):")
+MATCHER = re.compile(":([+\-]?\w+):")
 
 def interpolate_emoji_cb(data, modifier, modifier_data, message):
     return MATCHER.sub(replace_emoji, message)
