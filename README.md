@@ -13,8 +13,11 @@ Weechat with support for python plugins
 
 1. Copy weemoji.py to `~/.weechat/python/autoload`
 
-    cd ~/.weechat/python/autoload
-    wget https://raw.githubusercontent.com/kattrali/weemoji/master/weemoji.py
+```bash
+mkdir -p ~/.weechat/python/autoload
+cd ~/.weechat/python/autoload
+wget https://raw.githubusercontent.com/kattrali/weemoji/master/weemoji.py
+```
 
 2. Start Weechat
 
