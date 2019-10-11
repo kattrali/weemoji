@@ -33,7 +33,7 @@ try:
     import weechat
     import re
 except ImportError:
-    print "This script must be run under WeeChat."
+    print("This script must be run under WeeChat.")
     import_ok = False
 
 MATCHER = re.compile(":([+\-]?\w+):")
@@ -51,7 +51,7 @@ def replace_emoji(match):
     codepoint = EMOJI.get(text[1:-1])
     if codepoint:
         raw = '\\U%08x' % int(codepoint, 16)
-        return raw.decode('unicode-escape').encode('utf-8')
+        return raw.encode('utf-8').decode('unicode-escape')
     return text
 
 if __name__ == "__main__" and import_ok:
