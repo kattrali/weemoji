@@ -39,7 +39,7 @@ except ImportError:
 MATCHER = re.compile(":([+\-]?\w+):")
 
 def interpolate_emoji_cb(data, modifier, modifier_data, message):
-    return MATCHER.sub(replace_emoji, message)
+    return MATCHER.sub(replace_emoji, message.decode('utf-8'))
 
 def emoji_completion_cb(data, completion_item, buffer, completion):
     for key in EMOJI:
