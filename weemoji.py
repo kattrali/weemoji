@@ -48,9 +48,9 @@ def emoji_completion_cb(data, completion_item, buffer, completion):
 
 def replace_emoji(match):
     text = match.group(0)
-    codepoint = EMOJI.get(text[1:-1])
-    if codepoint:
-        raw = '\\U%08x' % int(codepoint, 16)
+    codepoints = EMOJI.get(text[1:-1])
+    if codepoints is not None:
+        raw = ''.join(['\\U%08x' % int(c, 16) for c in codepoints.split('-')])
         return raw.encode('utf-8').decode('unicode-escape')
     return text
 
